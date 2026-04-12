@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BB2 | Retro PC Big Box Beheer</title>
-    <meta name="description" content="BB2 is een lokale Windows desktop app voor collectiebeheer en in en verkoop van retro PC big box games." />
+    <title>BigBoxManager</title>
+    <meta name="description" content="Een lokale Windows app voor collectiebeheer van retro PC big box games." />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header class="bovenbalk">
         <div class="inhoud breedte">
-            <div class="merk">BB2</div>
+            <div class="merk">BigBoxManager</div>
 
             <nav class="navigatie">
-                <a href="#overzicht">Overzicht</a>
-                <a href="#functies">Functies</a>
-                <a href="#screenshots">Screenshots</a>
-                <a href="#download">Download</a>
-                <a href="#donatie">Donatie</a>
+                <a href="#overzicht" data-nl="Overzicht" data-en="Overview">Overzicht</a>
+                <a href="#functies" data-nl="Functies" data-en="Features">Functies</a>
+                <a href="#screenshots" data-nl="Screenshots" data-en="Screenshots">Screenshots</a>
+                <a href="#feedback" data-nl="Feedback" data-en="Feedback">Feedback</a>
             </nav>
+
+            <button id="taalKnop" class="taal-knop" type="button">EN</button>
         </div>
     </header>
 
@@ -26,23 +27,43 @@
         <section class="held">
             <div class="inhoud breedte held-inhoud">
                 <div class="held-tekst">
-                    <p class="label">Lokale Windows desktop app</p>
-                    <h1>BB2 voor retro PC big box collectiebeheer</h1>
-                    <p class="inleiding">
-                        BB2 is een WPF app in C# met SQLite.
-                        Alles draait lokaal op Windows.
-                        Geen cloud, geen online database, gewoon snel en overzichtelijk beheer van sets, titels, inkoop en verkoop.
+                    <p class="label"
+                       data-nl="Persoonlijk hobbyproject"
+                       data-en="Personal hobby project">
+                        Persoonlijk hobbyproject
+                    </p>
+
+                    <h1 data-nl="BigBoxManager voor retro PC big box collectiebeheer"
+                        data-en="BigBoxManager for retro PC big box collection management">
+                        BigBoxManager voor retro PC big box collectiebeheer
+                    </h1>
+
+                    <p class="inleiding"
+                       data-nl="Ten behoeve van mijn hobby heb ik deze app gemaakt. BigBoxManager is een lokale Windows desktop app in C# met WPF en SQLite, bedoeld om sets, titels, inkoop en verkoop van retro PC big box games overzichtelijk bij te houden."
+                       data-en="I made this app to support my hobby. BigBoxManager is a local Windows desktop app built in C# with WPF and SQLite, meant to keep track of sets, titles, purchases and sales of retro PC big box games.">
+                        Ten behoeve van mijn hobby heb ik deze app gemaakt. BigBoxManager is een lokale Windows desktop app in C# met WPF en SQLite, bedoeld om sets, titels, inkoop en verkoop van retro PC big box games overzichtelijk bij te houden.
                     </p>
 
                     <div class="knoppenrij">
-                        <a class="knop knop-hoofd" href="#download">Download</a>
-                        <a class="knop knop-secundair" href="#screenshots">Bekijk screenshots</a>
+                        <a class="knop knop-hoofd"
+                           href="#screenshots"
+                           data-nl="Bekijk screenshots"
+                           data-en="View screenshots">
+                            Bekijk screenshots
+                        </a>
+
+                        <a class="knop knop-secundair"
+                           href="#feedback"
+                           data-nl="Geef feedback"
+                           data-en="Send feedback">
+                            Geef feedback
+                        </a>
                     </div>
 
                     <ul class="kenmerkenlijst">
-                        <li>Lokaal opgeslagen in SQLite</li>
-                        <li>Gebouwd voor collectiebeheer en handel</li>
-                        <li>Speciaal voor retro PC big box games</li>
+                        <li data-nl="Lokaal opgeslagen in SQLite" data-en="Stored locally in SQLite">Lokaal opgeslagen in SQLite</li>
+                        <li data-nl="Gebouwd in C# met WPF" data-en="Built in C# with WPF">Gebouwd in C# met WPF</li>
+                        <li data-nl="Speciaal voor retro PC big box games" data-en="Made specifically for retro PC big box games">Speciaal voor retro PC big box games</li>
                     </ul>
                 </div>
 
@@ -67,31 +88,15 @@
         <section id="overzicht" class="sectie">
             <div class="inhoud breedte">
                 <div class="sectie-kop">
-                    <p class="label">Overzicht</p>
-                    <h2>Wat BB2 doet</h2>
+                    <p class="label" data-nl="Overzicht" data-en="Overview">Overzicht</p>
+                    <h2 data-nl="Waarom deze app is ontstaan" data-en="Why I started this app">Waarom deze app is ontstaan</h2>
                 </div>
 
-                <div class="kaarten drie-kolommen">
-                    <article class="kaart">
-                        <h3>Sets beheren</h3>
-                        <p>
-                            Houd inkoopmomenten, aankoopbedragen, verzendkosten en status van sets overzichtelijk bij.
-                        </p>
-                    </article>
-
-                    <article class="kaart">
-                        <h3>Titels koppelen</h3>
-                        <p>
-                            Koppel losse titels aan een set en beheer details zoals taal, compleetheid, conditie en notities.
-                        </p>
-                    </article>
-
-                    <article class="kaart">
-                        <h3>Inkoop en verkoop</h3>
-                        <p>
-                            Werk met lokale data en krijg beter zicht op investering, opbrengst en winst per titel of set.
-                        </p>
-                    </article>
+                <div class="kaart">
+                    <p data-nl="Ik verzamel en verkoop zo nu en dan retro PC big box games. Daarbij merkte ik dat algemene tools niet echt goed aansloten op wat ik wilde bijhouden. Daarom ben ik begonnen met een eigen lokale app, gericht op mijn eigen workflow en interesses."
+                       data-en="I collect and occasionally sell retro PC big box games. I noticed that general tools did not really fit what I wanted to track. That is why I started building my own local app, focused on my own workflow and interests.">
+                        Ik verzamel en verkoop zo nu en dan retro PC big box games. Daarbij merkte ik dat algemene tools niet echt goed aansloten op wat ik wilde bijhouden. Daarom ben ik begonnen met een eigen lokale app, gericht op mijn eigen workflow en interesses.
+                    </p>
                 </div>
             </div>
         </section>
@@ -99,36 +104,40 @@
         <section id="functies" class="sectie sectie-donker">
             <div class="inhoud breedte">
                 <div class="sectie-kop">
-                    <p class="label">Functies</p>
-                    <h2>Gemaakt voor jouw workflow</h2>
+                    <p class="label" data-nl="Functies" data-en="Features">Functies</p>
+                    <h2 data-nl="Wat er nu al in zit" data-en="What it currently includes">Wat er nu al in zit</h2>
                 </div>
 
                 <div class="kaarten twee-kolommen">
                     <article class="kaart">
-                        <h3>Lokaal en simpel</h3>
-                        <p>
-                            BB2 is geen webapp. De app draait lokaal op Windows en bewaart alle gegevens in SQLite.
+                        <h3 data-nl="Setbeheer" data-en="Set management">Setbeheer</h3>
+                        <p data-nl="Sets aanmaken en bijhouden met aankoopinformatie, kosten en notities."
+                           data-en="Create and manage sets with purchase information, costs and notes.">
+                            Sets aanmaken en bijhouden met aankoopinformatie, kosten en notities.
                         </p>
                     </article>
 
                     <article class="kaart">
-                        <h3>Snel overzicht</h3>
-                        <p>
-                            Snel schakelen tussen sets, titels en detailinformatie zonder gedoe met browservensters of online accounts.
+                        <h3 data-nl="Titels koppelen" data-en="Link titles">Titels koppelen</h3>
+                        <p data-nl="Titels koppelen aan sets en details opslaan zoals taal, compleetheid en conditie."
+                           data-en="Link titles to sets and store details such as language, completeness and condition.">
+                            Titels koppelen aan sets en details opslaan zoals taal, compleetheid en conditie.
                         </p>
                     </article>
 
                     <article class="kaart">
-                        <h3>Specifiek voor big box</h3>
-                        <p>
-                            Geen algemene voorraadtool, maar een app die is opgezet rondom retro PC big box verzamelen en verkopen.
+                        <h3 data-nl="Lokale database" data-en="Local database">Lokale database</h3>
+                        <p data-nl="Alle data wordt lokaal opgeslagen in SQLite. Geen cloud en geen online account nodig."
+                           data-en="All data is stored locally in SQLite. No cloud and no online account required.">
+                            Alle data wordt lokaal opgeslagen in SQLite. Geen cloud en geen online account nodig.
                         </p>
                     </article>
 
                     <article class="kaart">
-                        <h3>In ontwikkeling</h3>
-                        <p>
-                            BB2 wordt stap voor stap uitgebreid. Nieuwe schermen, verbeterde dataflow en meer detailvelden volgen later.
+                        <h3 data-nl="Inkoop en verkoop" data-en="Buying and selling">Inkoop en verkoop</h3>
+                        <p data-nl="Beter overzicht krijgen van investering, voorraad en opbrengst."
+                           data-en="Get a better overview of investment, stock and returns.">
+                            Beter overzicht krijgen van investering, voorraad en opbrengst.
                         </p>
                     </article>
                 </div>
@@ -138,81 +147,87 @@
         <section id="screenshots" class="sectie">
             <div class="inhoud breedte">
                 <div class="sectie-kop">
-                    <p class="label">Screenshots</p>
-                    <h2>Een indruk van de app</h2>
+                    <p class="label" data-nl="Screenshots" data-en="Screenshots">Screenshots</p>
+                    <h2 data-nl="Een indruk van de interface" data-en="A quick look at the interface">Een indruk van de interface</h2>
                 </div>
 
                 <div class="screenshot-rooster">
                     <figure class="screenshot-kaart">
-                        <img src="afbeeldingen/screenshot-dashboard.png" alt="Screenshot van het dashboard van BB2" />
-                        <figcaption>Dashboard</figcaption>
+                        <img src="afbeeldingen/screenshot-dashboard.png" alt="Screenshot dashboard" />
+                        <figcaption data-nl="Dashboard" data-en="Dashboard">Dashboard</figcaption>
                     </figure>
 
                     <figure class="screenshot-kaart">
-                        <img src="afbeeldingen/screenshot-sets.png" alt="Screenshot van het setsoverzicht van BB2" />
-                        <figcaption>Sets</figcaption>
+                        <img src="afbeeldingen/screenshot-sets.png" alt="Screenshot sets" />
+                        <figcaption data-nl="Sets" data-en="Sets">Sets</figcaption>
                     </figure>
 
                     <figure class="screenshot-kaart">
-                        <img src="afbeeldingen/screenshot-titel.png" alt="Screenshot van titelinformatie in BB2" />
-                        <figcaption>Titeldetails</figcaption>
+                        <img src="afbeeldingen/screenshot-titel.png" alt="Screenshot titeldetails" />
+                        <figcaption data-nl="Titeldetails" data-en="Title details">Titeldetails</figcaption>
                     </figure>
                 </div>
             </div>
         </section>
 
-        <section id="download" class="sectie sectie-donker">
+        <section id="feedback" class="sectie sectie-donker">
             <div class="inhoud breedte">
                 <div class="sectie-kop">
-                    <p class="label">Download</p>
-                    <h2>BB2 uitproberen</h2>
+                    <p class="label" data-nl="Feedback" data-en="Feedback">Feedback</p>
+                    <h2 data-nl="Ideeën, feature requests of opmerkingen" data-en="Ideas, feature requests or feedback">Ideeën, feature requests of opmerkingen</h2>
                 </div>
 
-                <div class="kaart download-kaart">
-                    <p>
-                        Hier kun je straks de nieuwste publieke build downloaden.
+                <div class="kaart">
+                    <p data-nl="Heb je een idee voor een functie of zie je iets dat handiger kan, dan hoor ik het graag. Je kunt een issue aanmaken op GitHub of een bericht sturen."
+                       data-en="If you have an idea for a feature or see something that could be improved, feel free to let me know. You can open an issue on GitHub or send a message.">
+                        Heb je een idee voor een functie of zie je iets dat handiger kan, dan hoor ik het graag. Je kunt een issue aanmaken op GitHub of een bericht sturen.
                     </p>
 
                     <div class="knoppenrij">
                         <a class="knop knop-hoofd"
-                           href="https://github.com/GEBRUIKERSNAAM/BB2-downloads/releases/latest/download/BB2-portable.zip">
-                            Download nieuwste versie
-                        </a>
-
-                        <a class="knop knop-secundair"
-                           href="https://github.com/GEBRUIKERSNAAM/BB2-downloads/releases/latest">
-                            Bekijk releases
+                           href="https://github.com/wjp79/Bigboxmanager/issues"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           data-nl="Open GitHub Issues"
+                           data-en="Open GitHub Issues">
+                            Open GitHub Issues
                         </a>
                     </div>
-
-                    <p class="kleine-tekst">
-                        Vervang GEBRUIKERSNAAM door jouw GitHub gebruikersnaam en gebruik een publieke repo voor downloads.
-                    </p>
                 </div>
             </div>
         </section>
 
-        <section id="donatie" class="sectie">
+        <section class="sectie">
             <div class="inhoud breedte">
                 <div class="sectie-kop">
-                    <p class="label">Donatie</p>
-                    <h2>Wil je het project steunen</h2>
+                    <p class="label" data-nl="Ideeën voor later" data-en="Ideas for later">Ideeën voor later</p>
+                    <h2 data-nl="Mogelijke uitbreidingen" data-en="Possible future additions">Mogelijke uitbreidingen</h2>
                 </div>
 
-                <div class="kaart donatie-kaart">
-                    <p>
-                        Gebruik BB2 met plezier en wil je het project ondersteunen, dan kun je een kleine donatie doen.
-                    </p>
+                <div class="kaarten drie-kolommen">
+                    <article class="kaart">
+                        <h3 data-nl="Roadmap" data-en="Roadmap">Roadmap</h3>
+                        <p data-nl="Een kleine lijst met geplande functies of ideeën waar ik nog aan wil werken."
+                           data-en="A small list with planned features or ideas I still want to work on.">
+                            Een kleine lijst met geplande functies of ideeën waar ik nog aan wil werken.
+                        </p>
+                    </article>
 
-                    <div class="knoppenrij">
-                        <a class="knop knop-hoofd" href="PAYPAL_LINK_HIER" target="_blank" rel="noopener noreferrer">
-                            Doneer via PayPal
-                        </a>
-                    </div>
+                    <article class="kaart">
+                        <h3 data-nl="Versiegeschiedenis" data-en="Version history">Versiegeschiedenis</h3>
+                        <p data-nl="Een simpel overzicht van wat er per versie is toegevoegd of aangepast."
+                           data-en="A simple overview of what was added or changed per version.">
+                            Een simpel overzicht van wat er per versie is toegevoegd of aangepast.
+                        </p>
+                    </article>
 
-                    <p class="kleine-tekst">
-                        Zet hier jouw PayPal link neer. Je kunt later ook een QR-code als afbeelding toevoegen.
-                    </p>
+                    <article class="kaart">
+                        <h3 data-nl="Over mij" data-en="About me">Over mij</h3>
+                        <p data-nl="Een klein persoonlijk stukje over verzamelen, hobby en waarom deze app bestaat."
+                           data-en="A short personal section about collecting, the hobby and why this app exists.">
+                            Een klein persoonlijk stukje over verzamelen, hobby en waarom deze app bestaat.
+                        </p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -220,9 +235,35 @@
 
     <footer class="voettekst">
         <div class="inhoud breedte voettekst-inhoud">
-            <p>© 2026 BB2</p>
-            <p>Gebouwd als lokale WPF app in C# met SQLite</p>
+            <p>© 2026 BigBoxManager</p>
+            <p data-nl="Lokale Windows app in C# WPF en SQLite"
+               data-en="Local Windows app built with C# WPF and SQLite">
+                Lokale Windows app in C# WPF en SQLite
+            </p>
         </div>
     </footer>
+
+    <script>
+        let huidigeTaal = "nl";
+
+        const taalKnop = document.getElementById("taalKnop");
+
+        function pasTaalToe(taal) {
+            const elementen = document.querySelectorAll("[data-nl][data-en]");
+
+            elementen.forEach(element => {
+                element.textContent = element.getAttribute("data-" + taal);
+            });
+
+            document.documentElement.lang = taal;
+            huidigeTaal = taal;
+            taalKnop.textContent = taal === "nl" ? "EN" : "NL";
+        }
+
+        taalKnop.addEventListener("click", () => {
+            const nieuweTaal = huidigeTaal === "nl" ? "en" : "nl";
+            pasTaalToe(nieuweTaal);
+        });
+    </script>
 </body>
 </html>
