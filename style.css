@@ -317,27 +317,7 @@ h3 {
     padding-top: 20px;
 }
 
-@media (max-width: 960px) {
-    .held-inhoud,
-    .drie-kolommen,
-    .twee-kolommen,
-    .screenshot-rooster {
-        grid-template-columns: 1fr;
-    }
-
-    .bovenbalk .inhoud {
-        align-items: flex-start;
-        padding: 14px 0;
-        flex-direction: column;
-    }
-
-    .voorbeeldinhoud {
-        grid-template-columns: 70px 120px 1fr;
-        min-height: 240px;
-    }
-}
-
-@media (max-width: 640px) {
+@me@media (max-width: 640px) {
     .held {
         padding-top: 42px;
     }
@@ -360,8 +340,9 @@ h3 {
     .voorbeeld-kolom.groot {
         min-height: 70px;
     }
+}
 
-    .taal-knop {
+.taal-knop {
     min-width: 52px;
     height: 40px;
     padding: 0 14px;
@@ -377,7 +358,7 @@ h3 {
     background: rgba(255, 255, 255, 0.04);
 }
 
-    .screenshot-kaart img {
+.screenshot-kaart img {
     width: 100%;
     aspect-ratio: 16 / 10;
     object-fit: cover;
@@ -416,5 +397,4 @@ h3 {
     border: 1px solid var(--rand);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     background: var(--veld-donker);
-}
 }
