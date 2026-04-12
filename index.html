@@ -319,5 +319,28 @@
             pasTaalToe(nieuweTaal);
         });
     </script>
+
+    <script>
+    function toonAfbeelding(bron, beschrijving) {
+        const overlay = document.getElementById("afbeeldingOverlay");
+        const afbeelding = document.getElementById("groteAfbeelding");
+
+        afbeelding.src = bron;
+        afbeelding.alt = beschrijving;
+        overlay.classList.add("zichtbaar");
+    }
+
+    function sluitAfbeelding() {
+        const overlay = document.getElementById("afbeeldingOverlay");
+        overlay.classList.remove("zichtbaar");
+    }
+</script>
+
+
+    <div id="afbeeldingOverlay" class="afbeelding-overlay" onclick="sluitAfbeelding()">
+    <img id="groteAfbeelding" class="grote-afbeelding" src="" alt="" />
+</div>
+
+    
 </body>
 </html>
