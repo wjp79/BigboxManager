@@ -360,4 +360,20 @@ h3 {
     .voorbeeld-kolom.groot {
         min-height: 70px;
     }
+
+    .taal-knop {
+    min-width: 52px;
+    height: 40px;
+    padding: 0 14px;
+    border-radius: 999px;
+    border: 1px solid var(--rand);
+    background: transparent;
+    color: var(--hoofdtekst);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.taal-knop:hover {
+    background: rgba(255, 255, 255, 0.04);
+}
 }
