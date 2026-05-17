@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BigBoxManager</title>
+    <meta name="description" content="Een lokale Windows app voor collectiebeheer van retro PC big box games." />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="afbeeldingen/BBM.ico" />
+</head>
+<body>
+    <header class="bovenbalk">
+        <div class="inhoud breedte">
+            <div class="merk">BigBoxManager</div>
+
+            <nav class="navigatie">
+                <a href="#download" data-nl="Download" data-en="Download">Download</a>
+                <a href="#overzicht" data-nl="Overzicht" data-en="Overview">Overzicht</a>
+                <a href="#functies" data-nl="Functies" data-en="Features">Functies</a>
+                <a href="#screenshots" data-nl="Screenshots" data-en="Screenshots">Screenshots</a>
+                <a href="#feedback" data-nl="Feedback" data-en="Feedback">Feedback</a>
+            </nav>
+
+            <button id="taalKnop" class="taal-knop" type="button">EN</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="held">
+            <div class="inhoud breedte held-inhoud">
+                <div class="held-tekst">
+                    <p class="label"
+                       data-nl="Persoonlijk hobbyproject"
+                       data-en="Personal hobby project">
+                        Persoonlijk hobbyproject
+                    </p>
+
+                    <h1 data-nl="BigBoxManager voor retro PC big box collectiebeheer"
+                        data-en="BigBoxManager for retro PC big box collection management">
+                        BigBoxManager voor retro PC big box collectiebeheer
+                    </h1>
+
+                    <p class="inleiding"
+                       data-nl="Ten behoeve van mijn hobby heb ik deze app gemaakt. BigBoxManager is een lokale Windows desktop app in C# met WPF en SQLite, bedoeld om sets, titels, inkoop en verkoop van retro PC big box games overzichtelijk bij te houden."
+                       data-en="I made this app to support my hobby. BigBoxManager is a local Windows desktop app built in C# with WPF and SQLite, meant to keep track of sets, titles, purchases and sales of retro PC big box games.">
+                        Ten behoeve van mijn hobby heb ik deze app gemaakt. BigBoxManager is een lokale Windows desktop app in C# met WPF en SQLite, bedoeld om sets, titels, inkoop en verkoop van retro PC big box games overzichtelijk bij te houden.
+                    </p>
+
+            <div class="knoppenrij">
+<a class="knop knop-hoofd"
+   href="https://github.com/wjp79/Bigboxmanager/releases/latest/download/BigBoxManager-portable.zip"
+   data-nl="Download nieuwste versie"
+   data-en="Download latest version">
+    Download nieuwste versie
+</a>
+
+    <a class="knop knop-secundair"
+       href="#screenshots"
+       data-nl="Bekijk screenshots"
+       data-en="View screenshots">
+        Bekijk screenshots
+    </a>
+
+    <a class="knop knop-secundair"
+       href="#feedback"
+       data-nl="Geef feedback"
+       data-en="Send feedback">
+        Geef feedback
+    </a>
+</div>
+
+                    <ul class="kenmerkenlijst">
+                        <li data-nl="Lokaal opgeslagen in SQLite" data-en="Stored locally in SQLite">Lokaal opgeslagen in SQLite</li>
+                        <li data-nl="Gebouwd in C# met WPF" data-en="Built in C# with WPF">Gebouwd in C# met WPF</li>
+                        <li data-nl="Speciaal voor retro PC big box games" data-en="Made specifically for retro PC big box games">Speciaal voor retro PC big box games</li>
+                    </ul>
+                </div>
+
+                <div class="held-kaart held-logo-kaart">
+                    <img class="held-logo-afbeelding"
+                         src="afbeeldingen/bbm-website-hero-collect-track-sell.jpg"
+                         alt="BigBoxManager softwarebox met Collect Track Sell slogan" />
+
+                    <div class="voorbeeld-labelrij">
+                        <span data-nl="BigBoxManager" data-en="BigBoxManager">BigBoxManager</span>
+                        <span class="label-slogan"
+                              data-nl="Collect • Track • Sell"
+                              data-en="Collect • Track • Sell">Collect • Track • Sell</span>
+                        <span data-nl="Geen cloud" data-en="No cloud">Geen cloud</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="overzicht" class="sectie">
+            <div class="inhoud breedte">
+                <div class="sectie-kop">
+                    <p class="label" data-nl="Overzicht" data-en="Overview">Overzicht</p>
+                    <h2 data-nl="Waarom deze app is ontstaan" data-en="Why I started this app">Waarom deze app is ontstaan</h2>
+                </div>
+
+                <div class="kaart">
+                    <p data-nl="Ik verzamel en verkoop zo nu en dan retro PC big box games. Daarbij merkte ik dat algemene tools niet echt goed aansloten op wat ik wilde bijhouden. Daarom ben ik begonnen met een eigen lokale app, gericht op mijn eigen workflow en interesses."
+                       data-en="I collect and occasionally sell retro PC big box games. I noticed that general tools did not really fit what I wanted to track. That is why I started building my own local app, focused on my own workflow and interests.">
+                        Ik verzamel en verkoop zo nu en dan retro PC big box games. Daarbij merkte ik dat algemene tools niet echt goed aansloten op wat ik wilde bijhouden. Daarom ben ik begonnen met een eigen lokale app, gericht op mijn eigen workflow en interesses.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="functies" class="sectie sectie-donker">
+            <div class="inhoud breedte">
+                <div class="sectie-kop">
+                    <p class="label" data-nl="Functies" data-en="Features">Functies</p>
+                    <h2 data-nl="Wat er nu al in zit" data-en="What it currently includes">Wat er nu al in zit</h2>
+                </div>
+
+                <div class="kaarten twee-kolommen">
+                    <article class="kaart">
+                        <h3 data-nl="Setbeheer" data-en="Set management">Setbeheer</h3>
+                        <p data-nl="Sets aanmaken en bijhouden met aankoopinformatie, kosten en notities."
+                           data-en="Create and manage sets with purchase information, costs and notes.">
+                            Sets aanmaken en bijhouden met aankoopinformatie, kosten en notities.
+                        </p>
+                    </article>
+
+                    <article class="kaart">
+                        <h3 data-nl="Titels koppelen" data-en="Link titles">Titels koppelen</h3>
+                        <p data-nl="Titels koppelen aan sets en details opslaan zoals taal, compleetheid en conditie."
+                           data-en="Link titles to sets and store details such as language, completeness and condition.">
+                            Titels koppelen aan sets en details opslaan zoals taal, compleetheid en conditie.
+                        </p>
+                    </article>
+
+                    <article class="kaart">
+                        <h3 data-nl="Lokale database" data-en="Local database">Lokale database</h3>
+                        <p data-nl="Alle data wordt lokaal opgeslagen in SQLite. Geen cloud en geen online account nodig."
+                           data-en="All data is stored locally in SQLite. No cloud and no online account required.">
+                            Alle data wordt lokaal opgeslagen in SQLite. Geen cloud en geen online account nodig.
+                        </p>
+                    </article>
+
+                    <article class="kaart">
+                        <h3 data-nl="Inkoop en verkoop" data-en="Buying and selling">Inkoop en verkoop</h3>
+                        <p data-nl="Beter overzicht krijgen van investering, voorraad en opbrengst."
+                           data-en="Get a better overview of investment, stock and returns.">
+                            Beter overzicht krijgen van investering, voorraad en opbrengst.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+
+<section id="screenshots" class="sectie">
+    <div class="inhoud breedte">
+        <div class="sectie-kop">
+            <p class="label" data-nl="Screenshots" data-en="Screenshots">Screenshots</p>
+            <h2 data-nl="Een indruk van de interface" data-en="A quick look at the interface">Een indruk van de interface</h2>
+        </div>
+
+        <div class="screenshot-rooster">
+            <figure class="screenshot-kaart">
+                <img src="afbeeldingen/screenshot-dashboard.png"
+                     alt="Screenshot dashboard"
+                     onclick="toonAfbeelding(this.src, this.alt)" />
+                <figcaption data-nl="Dashboard" data-en="Dashboard">Dashboard</figcaption>
+            </figure>
+
+            <figure class="screenshot-kaart">
+                <img src="afbeeldingen/Screenshot-sets2.png"
+                     alt="Screenshot sets"
+                     onclick="toonAfbeelding(this.src, this.alt)" />
+                <figcaption data-nl="Sets" data-en="Sets">Sets</figcaption>
+            </figure>
+
+            <figure class="screenshot-kaart">
+                <img src="afbeeldingen/screenshot-titel.png"
+                     alt="Screenshot titeldetails"
+                     onclick="toonAfbeelding(this.src, this.alt)" />
+                <figcaption data-nl="Titeldetails" data-en="Title details">Titeldetails</figcaption>
+            </figure>
+        </div>
+    </div>
+</section>
+
+        <section id="download" class="sectie sectie-donker">
+    <div class="inhoud breedte">
+        <div class="sectie-kop">
+            <p class="label" data-nl="Download" data-en="Download">Download</p>
+            <h2 data-nl="BigBoxManager downloaden" data-en="Download BigBoxManager">BigBoxManager downloaden</h2>
+        </div>
+
+        <div class="kaart download-kaart">
+            <p data-nl="Hier kun je de nieuwste publieke versie van BigBoxManager downloaden."
+               data-en="Here you can download the latest public version of BigBoxManager.">
+                Hier kun je de nieuwste publieke versie van BigBoxManager downloaden.
+            </p>
+
+            <div class="knoppenrij">
+                <a class="knop knop-hoofd"
+                   href="https://github.com/wjp79/Bigboxmanager/releases/latest/download/BigBoxManager-portable.zip"
+                   data-nl="Download nieuwste versie"
+                   data-en="Download latest version">
+                    Download nieuwste versie
+                </a>
+
+                <a class="knop knop-secundair"
+                   href="https://github.com/wjp79/Bigboxmanager/releases"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-nl="Bekijk releases"
+                   data-en="View releases">
+                    Bekijk releases
+                </a>
+            </div>
+
+            <p class="kleine-tekst"
+               data-nl="Let op. De bestandsnaam in de release moet exact overeenkomen met BigBoxManager-portable.zip."
+               data-en="Note. The asset filename in the release must exactly match BigBoxManager-portable.zip.">
+                Let op. De bestandsnaam in de release moet exact overeenkomen met BigBoxManager-portable.zip.
+            </p>
+        </div>
+    </div>
+</section>
+
+        <section id="feedback" class="sectie sectie-donker">
+            <div class="inhoud breedte">
+                <div class="sectie-kop">
+                    <p class="label" data-nl="Feedback" data-en="Feedback">Feedback</p>
+                    <h2 data-nl="Ideeën, feature requests of opmerkingen" data-en="Ideas, feature requests or feedback">Ideeën, feature requests of opmerkingen</h2>
+                </div>
+
+                <div class="kaart">
+                    <p data-nl="Heb je een idee voor een functie of zie je iets dat handiger kan, dan hoor ik het graag. Je kunt een issue aanmaken op GitHub of een bericht sturen."
+                       data-en="If you have an idea for a feature or see something that could be improved, feel free to let me know. You can open an issue on GitHub or send a message.">
+                        Heb je een idee voor een functie of zie je iets dat handiger kan, dan hoor ik het graag. Je kunt een issue aanmaken op GitHub of een bericht sturen.
+                    </p>
+
+                    <div class="knoppenrij">
+                        <a class="knop knop-hoofd"
+                           href="https://github.com/wjp79/Bigboxmanager/issues"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           data-nl="Open GitHub Issues"
+                           data-en="Open GitHub Issues">
+                            Open GitHub Issues
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sectie">
+            <div class="inhoud breedte">
+                <div class="sectie-kop">
+                    <p class="label" data-nl="Ideeën voor later" data-en="Ideas for later">Ideeën voor later</p>
+                    <h2 data-nl="Mogelijke uitbreidingen" data-en="Possible future additions">Mogelijke uitbreidingen</h2>
+                </div>
+
+                <div class="kaarten drie-kolommen">
+                    <article class="kaart">
+                        <h3 data-nl="Roadmap" data-en="Roadmap">Roadmap</h3>
+                        <p data-nl="-Multilanguage"
+                           data-en="A small list with planned features or ideas I still want to work on.">
+                            -Multilanguage (momenteel alleen in het NL)
+                        </p>
+                    </article>
+
+                    <article class="kaart">
+                        <h3 data-nl="Versiegeschiedenis" data-en="Version history">Versiegeschiedenis</h3>
+                        <p data-nl="Een simpel overzicht van wat er per versie is toegevoegd of aangepast."
+                           data-en="A simple overview of what was added or changed per version.">
+                            Een simpel overzicht van wat er per versie is toegevoegd of aangepast.
+                        </p>
+                    </article>
+
+       <article class="kaart">
+    <h3 data-nl="Over mij" data-en="About me">Over mij</h3>
+
+    <p data-nl="Hoi, ik ben Wierd en BigBoxManager is ontstaan uit mijn hobby voor retro PC big box games, verzamelen en het bouwen van handige tools. Ik heb deze app gemaakt omdat ik iets wilde dat goed aansloot op mijn eigen manier van werken. Heb je er iets aan en gebruik je de app met plezier, dan vind ik dat al superleuk. Wil je het project daarnaast steunen, dan wordt een kleine donatie altijd gewaardeerd."
+       data-en="Hi, I’m Wierd, and BigBoxManager grew out of my hobby for retro PC big box games, collecting, and building useful tools. I made this app because I wanted something that really matched the way I work. If the app is useful to you and you enjoy using it, that already means a lot to me. And if you would like to support the project, a small donation is always appreciated.">
+        Hoi, ik ben Wierd en BigBoxManager is ontstaan uit mijn hobby voor retro PC big box games, verzamelen en het bouwen van handige tools. Ik heb deze app gemaakt omdat ik iets wilde dat goed aansloot op mijn eigen manier van werken. Heb je er iets aan en gebruik je de app met plezier, dan vind ik dat al superleuk. Wil je het project daarnaast steunen, dan wordt een kleine donatie altijd gewaardeerd.
+    </p>
+
+    <div class="knoppenrij">
+        <a class="knop knop-hoofd"
+           href="https://paypal.me/wierd"
+           target="_blank"
+           rel="noopener noreferrer"
+           data-nl="Steun dit project"
+           data-en="Support this project">
+            Steun dit project
+        </a>
+    </div>
+</article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="voettekst">
+        <div class="inhoud breedte voettekst-inhoud">
+            <p>© 2026 BigBoxManager</p>
+            <p data-nl="Lokale Windows app in C# WPF en SQLite"
+               data-en="Local Windows app built with C# WPF and SQLite">
+                Lokale Windows app in C# WPF en SQLite
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        let huidigeTaal = "nl";
+
+        const taalKnop = document.getElementById("taalKnop");
+
+        function pasTaalToe(taal) {
+            const elementen = document.querySelectorAll("[data-nl][data-en]");
+
+            elementen.forEach(element => {
+                element.textContent = element.getAttribute("data-" + taal);
+            });
+
+            document.documentElement.lang = taal;
+            huidigeTaal = taal;
+            taalKnop.textContent = taal === "nl" ? "EN" : "NL";
+        }
+
+        taalKnop.addEventListener("click", () => {
+            const nieuweTaal = huidigeTaal === "nl" ? "en" : "nl";
+            pasTaalToe(nieuweTaal);
+        });
+
+            function toonAfbeelding(bron, beschrijving) {
+        const overlay = document.getElementById("afbeeldingOverlay");
+        const afbeelding = document.getElementById("groteAfbeelding");
+
+        afbeelding.src = bron;
+        afbeelding.alt = beschrijving;
+        overlay.classList.add("zichtbaar");
+    }
+
+    function sluitAfbeelding() {
+        const overlay = document.getElementById("afbeeldingOverlay");
+        overlay.classList.remove("zichtbaar");
+    }       
+</script>
+
+
+    <div id="afbeeldingOverlay" class="afbeelding-overlay" onclick="sluitAfbeelding()">
+    <img id="groteAfbeelding" class="grote-afbeelding" src="" alt="" />
+</div>
+
+    
+</body>
+</html>
