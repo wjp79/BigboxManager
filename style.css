@@ -1,4 +1,4 @@
-:root {
+a:root {
     --achtergrond: #0A0F16;
     --paneel-donker: #111827;
     --tweede-paneel: #161E2A;
@@ -177,59 +177,51 @@ h3 {
 }
 
 .held-kaart {
-    background: linear-gradient(180deg, rgba(27, 36, 50, 0.96), rgba(17, 24, 39, 0.96));
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 18%, rgba(79, 140, 255, 0.20), transparent 38%),
+        linear-gradient(180deg, rgba(27, 36, 50, 0.96), rgba(17, 24, 39, 0.96));
     border: 1px solid var(--rand);
     border-radius: var(--radius-groot);
     box-shadow: var(--schaduw);
-    padding: 22px;
+    padding: 18px;
 }
 
-.voorbeeldvenster {
-    overflow: hidden;
-    border: 1px solid var(--rand);
-    border-radius: 18px;
-    background: var(--veld-donker);
-}
-
-.voorbeeldbalk {
+.held-logo-kaart {
     display: flex;
-    gap: 8px;
-    padding: 14px;
-    border-bottom: 1px solid var(--rand);
-    background: rgba(255, 255, 255, 0.02);
+    flex-direction: column;
+    gap: 16px;
 }
 
-.voorbeeldbalk span {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #324153;
+.held-logo-afbeelding {
+    width: 100%;
+    border-radius: 16px;
+    background: var(--veld-donker);
+    box-shadow: 0 20px 42px rgba(0, 0, 0, 0.36);
 }
 
-.voorbeeldinhoud {
-    display: grid;
-    grid-template-columns: 90px 180px 1fr;
-    gap: 12px;
-    min-height: 320px;
-    padding: 14px;
+.voorbeeld-labelrij {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-.voorbeeld-kolom {
+.voorbeeld-labelrij span {
     border: 1px solid var(--rand);
-    border-radius: 14px;
-    background: linear-gradient(180deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.95));
+    border-radius: 999px;
+    padding: 6px 12px;
+    background: rgba(15, 23, 42, 0.74);
+    color: var(--subtiele-tekst);
+    font-size: 0.82rem;
+    font-weight: 700;
 }
 
-.voorbeeld-kolom.klein {
-    min-height: 260px;
-}
-
-.voorbeeld-kolom.midden {
-    min-height: 260px;
-}
-
-.voorbeeld-kolom.groot {
-    min-height: 260px;
+.voorbeeld-labelrij .label-slogan {
+    color: var(--hoofdtekst);
+    border-color: rgba(79, 140, 255, 0.58);
+    background: rgba(79, 140, 255, 0.16);
 }
 
 .sectie {
@@ -317,7 +309,7 @@ h3 {
     padding-top: 20px;
 }
 
-@me@media (max-width: 640px) {
+@media (max-width: 640px) {
     .held {
         padding-top: 42px;
     }
@@ -397,4 +389,14 @@ h3 {
     border: 1px solid var(--rand);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     background: var(--veld-donker);
+}
+@media (max-width: 900px) {
+    .held-inhoud {
+        grid-template-columns: 1fr;
+    }
+
+    .held-logo-kaart {
+        max-width: 620px;
+        margin: 0 auto;
+    }
 }
